@@ -22,7 +22,7 @@ app.post('/api/add-movie', (req, res) =>
 );
 
 app.get('/api/movies', (req, res) =>
-    db.query('SELECT * FROM movies', function (err, results) {
+    db.query('SELECT movie_name FROM movies', function (err, results) {
         console.log(results);
         console.log(`${req.method} request received`)
     })
